@@ -773,11 +773,26 @@ nav.scrolled {
 @media (max-width: 600px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: var(--surface);
+        padding: 20px;
+        gap: 15px;
+        z-index: 999;
     }
-    
+
+    .nav-links.active {
+        display: flex; 
+    }
+
     .menu-toggle {
         display: block;
+        color: var(--text-main);
     }
+}
     
     .hero-btns {
         flex-direction: column;
