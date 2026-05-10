@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
@@ -22,44 +22,97 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body class="dark-theme">
+    <!-- Animated Background -->
+    <div class="bg-gradient-blur"></div>
     <div class="cursor-glow"></div>
 
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span>SAYED</span>ALAA
-            </div>
+            <a href="#home" class="logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </span>
+                <span class="logo-text">SAYED<span>ALAA</span></span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact" class="cta-nav">Hire Me</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link cta-nav">Hire Me</a></li>
             </ul>
-            <div class="theme-toggle" id="theme-switch">
-                <i data-lucide="moon"></i>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <i data-lucide="menu"></i>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="theme-switch" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <header id="home" class="hero section">
+        <!-- Decorative SVGs -->
+        <div class="hero-bg-shapes">
+            <svg class="shape shape-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--primary)" d="M44.7,-76.4C58.1,-69.2,69.2,-57.4,76.5,-43.8C83.8,-30.1,87.3,-15,86.2,-0.6C85.1,13.8,79.5,27.6,71.2,39.6C62.9,51.6,51.9,61.8,39.3,69.4C26.7,77,12.5,82.1,-1.2,84.1C-14.8,86.1,-29.7,85.1,-43.3,78.8C-56.9,72.6,-69.3,61.1,-77.3,47.4C-85.3,33.7,-88.9,17.8,-88.4,2.2C-87.9,-13.4,-83.4,-28.7,-74.6,-41.8C-65.7,-54.9,-52.5,-65.8,-38.4,-72.6C-24.3,-79.4,-9.3,-82.1,4.4,-89.7C18.1,-97.3,31.2,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+            <svg class="shape shape-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--secondary)" d="M39.9,-65.7C51.1,-58.3,59.2,-46.1,64.9,-32.9C70.6,-19.8,74,-5.7,72.2,7.7C70.3,21.1,63.2,33.8,53.4,44.3C43.6,54.8,31,63.1,17.3,67.3C3.6,71.6,-11.2,71.8,-25.1,67.6C-39,63.4,-51.9,54.8,-61.1,43.2C-70.3,31.7,-75.7,17.2,-76,2.6C-76.3,-12,-71.4,-26.6,-62.4,-38.7C-53.4,-50.8,-40.3,-60.4,-27.1,-66.6C-13.8,-72.8,-0.4,-75.6,13.3,-72.8C27,-70,40.6,-61.5,39.9,-65.7Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+
         <div class="container hero-content">
-            <div class="badge reveal">Professional Precision | Rapid Delivery</div>
-            <h1 class="reveal">Sayed Alaa <span class="accent">Gomaa</span></h1>
-            <p class="role reveal">Graphic Designer & <span class="ai-text">AI Content Creator</span></p>
-            <p class="tagline reveal">Smart Advertising Solutions that Scale Your Vision.</p>
+            <div class="badge reveal">
+                <i data-lucide="sparkles"></i>
+                Professional Precision | Rapid Delivery
+            </div>
+            <h1 class="reveal">Elevating <span class="accent-gradient">Digital</span> Experiences</h1>
+            <p class="role reveal">Sayed Alaa Gomaa | <span class="ai-text">AI Content Creator</span></p>
+            <p class="tagline reveal">Transforming visions into high-conversion visual stories using cutting-edge AI and design principles.</p>
             <div class="hero-btns reveal">
-                <a href="#portfolio" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get in Touch</a>
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>Explore Work</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+            
+            <div class="social-hero reveal">
+                <a href="https://www.linkedin.com/in/sayed-alaa-12a5981bb/" target="_blank" class="social-icon-link" title="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://www.behance.net/saiedalaa" target="_blank" class="social-icon-link" title="Behance">
+                    <i data-lucide="external-link"></i>
+                </a>
+                <a href="https://www.facebook.com/sayed.g21" target="_blank" class="social-icon-link" title="Facebook">
+                    <i data-lucide="facebook"></i>
+                </a>
             </div>
         </div>
+        
+        <div class="hero-visual reveal">
+            <div class="floating-elements">
+                <div class="element el-1">PS</div>
+                <div class="element el-2">AI</div>
+                <div class="element el-3">PR</div>
+            </div>
+        </div>
+
         <div class="hero-scroll">
-            <div class="mouse"></div>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
     </header>
 
@@ -68,29 +121,41 @@
             <div class="about-img reveal">
                 <div class="img-wrapper">
                     <img src="img/img5.jpeg" alt="Sayed Alaa Gomaa">
-                    <div class="img-accent"></div>
+                    <div class="img-overlay"></div>
+                    <div class="experience-badge">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">Years Exp.</span>
+                    </div>
                 </div>
+                <div class="img-blob"></div>
             </div>
             <div class="about-text">
-                <h2 class="reveal">Bridging <span class="accent">Art</span> & <span class="ai-text">Intelligence</span>
-                </h2>
-                <p class="reveal">I am a specialized designer who merges traditional creative arts with cutting-edge AI
-                    technologies. My expertise lies in translating a client's vision into reality, whether through
-                    static graphic designs or engaging, high-conversion Reels and Shorts.</p>
-                <p class="reveal">I pride myself on delivering top-tier quality under tight deadlines, ensuring your
-                    brand stands out in the digital age.</p>
-                <div class="stats reveal">
-                    <div class="stat">
-                        <span class="number">100%</span>
-                        <span class="label">Precision</span>
+                <div class="section-badge reveal">About Me</div>
+                <h2 class="reveal">Bridging <span class="accent">Art</span> & <span class="ai-text">Intelligence</span></h2>
+                <p class="reveal">I am a specialized designer who merges traditional creative arts with cutting-edge AI technologies. My expertise lies in translating a client's vision into reality, whether through static graphic designs or engaging, high-conversion Reels and Shorts.</p>
+                <p class="reveal">I pride myself on delivering top-tier quality under tight deadlines, ensuring your brand stands out in the digital age.</p>
+                
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="check-circle"></i></div>
+                        <div>
+                            <span class="number">100%</span>
+                            <span class="label">Precision</span>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="number">Fast</span>
-                        <span class="label">Delivery</span>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="zap"></i></div>
+                        <div>
+                            <span class="number">Fast</span>
+                            <span class="label">Delivery</span>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="number">Smart</span>
-                        <span class="label">Solutions</span>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="cpu"></i></div>
+                        <div>
+                            <span class="number">Smart</span>
+                            <span class="label">Solutions</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,64 +165,92 @@
     <section id="skills" class="section">
         <div class="container">
             <div class="section-header center">
-                <h2 class="reveal">My <span class="accent">Skills</span></h2>
+                <div class="section-badge reveal">Skills</div>
+                <h2 class="reveal">My <span class="accent">Expertise</span></h2>
                 <p class="reveal">Tools and technologies I use to bring ideas to life.</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card reveal" data-delay="0.1s">
-                    <i data-lucide="layers"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="layers"></i>
+                    </div>
                     <h4>Photoshop</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
                 </div>
                 <div class="skill-card reveal" data-delay="0.2s">
-                    <i data-lucide="layout"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="layout"></i>
+                    </div>
                     <h4>Canva</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-card reveal" data-delay="0.3s">
-                    <i data-lucide="scissors"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="scissors"></i>
+                    </div>
                     <h4>InShot</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
                 </div>
                 <div class="skill-card reveal" data-delay="0.4s">
-                    <i data-lucide="video"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="video"></i>
+                    </div>
                     <h4>CapCut</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
                 </div>
                 <div class="skill-card reveal" data-delay="0.5s">
-                    <i data-lucide="mic-2"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="mic-2"></i>
+                    </div>
                     <h4>Voice Over</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
                 </div>
                 <div class="skill-card reveal" data-delay="0.6s">
-                    <i data-lucide="Smartphone"></i>
+                    <div class="skill-icon-wrapper">
+                        <i data-lucide="smartphone"></i>
+                    </div>
                     <h4>Reels Creation</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 98%;"></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section bg-light">
+    <section id="experience" class="section glass-bg">
         <div class="container">
             <div class="section-header center">
+                <div class="section-badge reveal">Journey</div>
                 <h2 class="reveal">Professional <span class="accent">Experience</span></h2>
                 <p class="reveal">A track record of delivering excellence.</p>
             </div>
-            <div class="exp-list">
-                <div class="exp-item reveal">
-                    <span class="date">Portfolio Project</span>
-                    <h3>مؤسسة شاهد للخدمات الامنية</h3>
-                    <p>تصميم هوية بصرية كاملة للمؤسسة تشمل الشعار والمطبوعات والهوية الرقمية.</p>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Portfolio Project</span>
+                        <h3>مؤسسة شاهد للخدمات الامنية</h3>
+                        <p>تصميم هوية بصرية كاملة للمؤسسة تشمل الشعار والمطبوعات والهوية الرقمية.</p>
+                    </div>
                 </div>
-                <div class="exp-item reveal">
-                    <span class="date">Education Project</span>
-                    <h3>منصة Smart School</h3>
-                    <p>تصميم هوية بصرية كاملة للمنصة مع التركيز على تجربة المستخدم التعليمية.</p>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Education Project</span>
+                        <h3>منصة Smart School</h3>
+                        <p>تصميم هوية بصرية كاملة للمنصة مع التركيز على تجربة المستخدم التعليمية.</p>
+                    </div>
                 </div>
-                <div class="exp-item reveal">
-                    <span class="date">Present</span>
-                    <h3>Freelancer</h3>
-                    <p>Creating professional graphic designs, marketing videos, and high-conversion Reels/Shorts using
-                        advanced AI tools.</p>
-                    <div class="ai-apps">
-                        <span class="ai-badge">Grok</span>
-                        <span class="ai-badge">Gemini</span>
-                        <span class="ai-badge">Genspark.ai</span>
+                <div class="timeline-item reveal active">
+                    <div class="timeline-dot pulse"></div>
+                    <div class="timeline-content highlight">
+                        <span class="date">Present</span>
+                        <h3>Freelance AI Content Specialist</h3>
+                        <p>Creating professional graphic designs, marketing videos, and high-conversion Reels/Shorts using advanced AI tools.</p>
+                        <div class="ai-apps">
+                            <span class="ai-badge"><i data-lucide="cpu"></i> Grok</span>
+                            <span class="ai-badge"><i data-lucide="sparkles"></i> Gemini</span>
+                            <span class="ai-badge"><i data-lucide="zap"></i> Genspark.ai</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,6 +260,7 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header center">
+                <div class="section-badge reveal">Offerings</div>
                 <h2 class="reveal">Premium <span class="accent">Services</span></h2>
                 <p class="reveal">Tailored creative solutions for modern brands.</p>
             </div>
@@ -176,24 +270,25 @@
                         <i data-lucide="palette"></i>
                     </div>
                     <h3>Graphic Design</h3>
-                    <p>Full Visual Identity (Branding) and Social Media posts specialized in Educational & Corporate
-                        sectors.</p>
+                    <p>Full Visual Identity (Branding) and Social Media posts specialized in Educational & Corporate sectors.</p>
+                    <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
                 </div>
-                <div class="service-card reveal highlight">
+                <div class="service-card reveal featured">
+                    <div class="service-badge">Popular</div>
                     <div class="service-icon">
                         <i data-lucide="video"></i>
                     </div>
                     <h3>AI Reels & Shorts</h3>
-                    <p>Professional video creation powered by AI, from scriptwriting to final export for maximum
-                        engagement.</p>
+                    <p>Professional video creation powered by AI, from scriptwriting to final export for maximum engagement.</p>
+                    <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
                         <i data-lucide="mic"></i>
                     </div>
                     <h3>AI Voiceover</h3>
-                    <p>High-quality voiceovers in all languages and dialects to give your content a professional voice.
-                    </p>
+                    <p>High-quality voiceovers in all languages and dialects to give your content a professional voice.</p>
+                    <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
                 </div>
             </div>
         </div>
@@ -202,89 +297,201 @@
     <section id="portfolio" class="section">
         <div class="container">
             <div class="section-header center">
+                <div class="section-badge reveal">Portfolio</div>
                 <h2 class="reveal">Selected <span class="accent">Works</span></h2>
                 <p class="reveal">A glimpse into my creative journey.</p>
             </div>
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="ai">AI Content</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="design">
                     <img src="img/img1.jpeg" alt="Educational Design">
-                    <div class="overlay">
-                        <span>Educational Section</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Educational Section</span>
+                            <h4>Smart Learning Identity</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="design">
                     <img src="img/img2.jpeg" alt="Historical Content">
-                    <div class="overlay">
-                        <span>Cultural Branding</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Cultural Branding</span>
+                            <h4>Heritage Modernized</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="ai">
                     <img src="img/img3.jpeg" alt="Corporate Design">
-                    <div class="overlay">
-                        <span>Electronic Banking</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Electronic Banking</span>
+                            <h4>Fintech UI Design</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="video">
                     <img src="img/img4.jpeg" alt="Food Advertising">
-                    <div class="overlay">
-                        <span>Social Media Ad</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Social Media Ad</span>
+                            <h4>Gourmet Experience</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="design">
                     <img src="img/img6.jpeg" alt="Product Design">
-                    <div class="overlay">
-                        <span>Premium Product Ad</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Premium Product Ad</span>
+                            <h4>Luxury Branding</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item reveal">
+                <div class="portfolio-item reveal" data-category="ai">
                     <img src="img/img7.jpeg" alt="Personal Branding">
-                    <div class="overlay">
-                        <span>Personal Identity</span>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Personal Identity</span>
+                            <h4>Creator Brand System</h4>
+                        </div>
+                        <div class="portfolio-action">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center reveal" style="margin-top: 50px;">
+                <a href="https://www.behance.net/saiedalaa" target="_blank" class="btn btn-outline">
+                    <span>View More on Behance</span>
+                    <i data-lucide="external-link"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-card reveal">
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <div class="section-badge">Let's Talk</div>
+                        <h2>Ready to <span class="accent">Elevate</span> Your Brand?</h2>
+                        <p>I'm available for freelance opportunities and collaborations. Let's create something extraordinary together.</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-method">
+                                <div class="icon-box"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <span>Phone</span>
+                                    <p>+20 112 000 9921</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="icon-box"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <span>Email</span>
+                                    <p>sayed.alaa@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-grid">
+                            <a href="https://wa.me/201120009921" target="_blank" class="social-link whatsapp">
+                                <i data-lucide="message-circle"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sayed-alaa-12a5981bb/" target="_blank" class="social-link linkedin">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/sayed.g21" target="_blank" class="social-link facebook">
+                                <i data-lucide="facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.behance.net/saiedalaa" target="_blank" class="social-link behance">
+                                <i data-lucide="external-link"></i>
+                                <span>Behance</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="How can I help you?" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">
+                                <span>Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-        <div class="container narrow">
-            <div class="contact-visual-box reveal center">
-                <div class="badge"><i data-lucide="sparkles" style="width:14px; vertical-align:middle;"></i> Let's
-                    Create Something Amazing</div>
-                <h2>Ready to elevate your brand? <span class="accent">Reach out today.</span></h2>
-                <p>Smart advertising solutions that scale your vision.</p>
-
-                <div class="contact-info-list">
-                    <div class="contact-item">
-                        <i data-lucide="phone"></i>
-                        <span>+201120009921</span>
-                    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <span class="logo-text">SAYED<span>ALAA</span></span>
                 </div>
-
-                <div class="contact-links">
-                    <a href="https://wa.me/201120009921" target="_blank" class="social-btn whatsapp-btn">
-                        <i data-lucide="message-circle"></i> WhatsApp
-                    </a>
-                    <a href="https://www.facebook.com/sayed.g21" target="_blank" class="social-btn fb">
-                        <i data-lucide="facebook"></i> Facebook
-                    </a>
-                    <a href="https://www.behance.net/saiedalaa" target="_blank" class="social-btn bh">
-                        <i data-lucide="external-link"></i> Behance
-                    </a>
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sayed Alaa Gomaa. Crafted with <i data-lucide="heart" class="heart-icon"></i> and AI.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/sayed-alaa-12a5981bb/"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.facebook.com/sayed.g21"><i data-lucide="facebook"></i></a>
+                    <a href="https://www.behance.net/saiedalaa"><i data-lucide="external-link"></i></a>
                 </div>
             </div>
-            <div class="footer-divider"></div>
-            <p class="footer-text center">&copy; 2026 Sayed Alaa Gomaa. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
     <!-- Modal for images -->
     <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <div id="caption"></div>
+        <div class="modal-overlay"></div>
+        <span class="modal-close"><i data-lucide="x"></i></span>
+        <div class="modal-container">
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+        </div>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script>
         // Initialize Lucide icons
@@ -292,8 +499,4 @@
     </script>
 </body>
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 66aeffc5cce43590e7702aafdef2129d8ea6f95c
